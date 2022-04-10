@@ -1,5 +1,6 @@
 package br.com.ceub.FarmaSearchapi.dto;
 
+import lombok.Builder;
 import lombok.Data;
 
 import javax.persistence.Column;
@@ -11,6 +12,7 @@ import java.math.BigDecimal;
 @Entity
 @Table(name = "farmacia")
 @Data
+@Builder
 public class MedicamentoDto {
 
     @Id

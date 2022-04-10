@@ -1,13 +1,16 @@
 package br.com.ceub.FarmaSearchapi.dto;
 
+import lombok.Builder;
 import lombok.Data;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "usuario")
 @Data
+@Builder
 public class ProdutoDto {
 
     @Id
@@ -37,13 +40,13 @@ public class ProdutoDto {
     private Integer valor;
 
     @Column(name = "data_publicacao")
-    private Integer dataPublicacao;
+    private LocalDateTime dataPublicacao;
 
     @Column(name = "inicio_desconto")
-    private String inicioDesconto;
+    private LocalDateTime inicioDesconto;
 
     @Column(name = "fim_desconto")
-    private String fimDesconto;
+    private LocalDateTime fimDesconto;
 
 
 
